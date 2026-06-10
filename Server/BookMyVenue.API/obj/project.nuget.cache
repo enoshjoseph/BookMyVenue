@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sKJiEMxc024=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\enosh\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "C:\\Users\\enosh\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

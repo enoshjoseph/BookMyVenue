@@ -1,0 +1,12 @@
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\bin\Debug\net9.0\BookMyVenue.Core.deps.json
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\bin\Debug\net9.0\BookMyVenue.Core.dll
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\bin\Debug\net9.0\BookMyVenue.Core.pdb
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\BookMyVenue.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\BookMyVenue.Core.AssemblyInfoInputs.cache
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\BookMyVenue.Core.AssemblyInfo.cs
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\BookMyVenue.Core.csproj.CoreCompileInputs.cache
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\BookMyVenue.Core.sourcelink.json
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\BookMyVenue.Core.dll
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\refint\BookMyVenue.Core.dll
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\BookMyVenue.Core.pdb
+C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Core\obj\Debug\net9.0\ref\BookMyVenue.Core.dll
