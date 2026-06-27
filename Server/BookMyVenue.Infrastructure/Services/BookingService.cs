@@ -25,6 +25,14 @@ public class BookingService : IBookingService
         if (venue.Status != VenueStatus.Approved)
             throw new Exception("Venue is not available for booking.");
 
+        var today = DateOnly.FromDateTime(DateTime.UtcNow);
+
+        if (dto.StartDate < today)
+            throw new Exception("Booking start date cannot be in the past");
+
+        if (dto.StartDate < venue.AvailableFrom || dto.EndDate > venue.AvailableTo)
+            throw new Exception($"Venue is only available from {venue.AvailableFrom} to {venue.AvailableTo}.");
+
         var isAvailable = await _bookingRepo.IsVenueAvailableAsync(
             dto.VenueId, dto.StartDate, dto.EndDate);
 

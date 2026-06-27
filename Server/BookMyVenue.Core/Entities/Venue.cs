@@ -13,6 +13,8 @@ public class Venue : BaseEntity
     public decimal PricePerDay { get; set; }
     public int Capacity { get; set; }
     public VenueStatus Status { get; set; } = VenueStatus.Pending;
+    public DateOnly AvailableFrom { get; set; }
+    public DateOnly AvailableTo { get; set; }
 
     // Payment policy
     public bool IsAdvanceRequired { get; set; } = false;
