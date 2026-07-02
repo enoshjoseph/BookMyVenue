@@ -50,8 +50,16 @@ public class VenueRepository : IVenueRepository
             .Include(v => v.Images)
             .Include(v => v.Amenities)
             .Include(v => v.BlockedDates)
+            .Include(v => v.Bookings)
             .Include(v => v.Owner)
             .FirstOrDefaultAsync(v => v.Id == id);
+
+    public async Task<IEnumerable<Venue>> GetAllAsync() =>
+        await _db.Venues
+            .Include(v => v.Images)
+            .Include(v => v.Amenities)
+            .OrderByDescending(v => v.CreatedAt)
+            .ToListAsync();
 
     public async Task<IEnumerable<Venue>> GetAllApprovedAsync() =>
         await _db.Venues
@@ -65,6 +73,7 @@ public class VenueRepository : IVenueRepository
             .Include(v => v.Images)
             .Include(v => v.Amenities)
             .Include(v => v.BlockedDates)
+            .Include(v => v.Bookings)
             .Where(v => v.OwnerId == ownerId)
             .ToListAsync();
 
@@ -95,9 +104,34 @@ public class VenueRepository : IVenueRepository
 
     public Task UpdateAsync(Venue venue)
     {
-        _db.Venues.Update(venue);
+        if (_db.Entry(venue).State == EntityState.Detached)
+        {
+            _db.Venues.Update(venue);
+        }
         return Task.CompletedTask;
     }
+    public async Task ReplaceImagesAsync(Guid venueId, List<string> imageUrls)
+{
+    // Get existing images from the database
+    var existingImages = await _db.VenueImages
+        .Where(i => i.VenueId == venueId)
+        .ToListAsync();
+
+    // Remove existing images
+    _db.VenueImages.RemoveRange(existingImages);
+
+    // Add new images
+    for (int i = 0; i < imageUrls.Count; i++)
+    {
+        await _db.VenueImages.AddAsync(new VenueImage
+        {
+            VenueId = venueId,
+            ImageUrl = imageUrls[i],
+            IsPrimary = i == 0
+        });
+    }
+    await Task.CompletedTask;
+}
 
     public async Task SaveChangesAsync() =>
         await _db.SaveChangesAsync();
@@ -117,6 +151,14 @@ public class BookingRepository : IBookingRepository
             .Include(b => b.Venue)
             .Include(b => b.Payments)
             .FirstOrDefaultAsync(b => b.Id == id);
+
+    public async Task<IEnumerable<Booking>> GetAllAsync() =>
+        await _db.Bookings
+            .Include(b => b.Venue)
+            .Include(b => b.User)
+            .Include(b => b.Payments)
+            .OrderByDescending(b => b.CreatedAt)
+            .ToListAsync();
 
     public async Task<IEnumerable<Booking>> GetByUserIdAsync(Guid userId) =>
         await _db.Bookings

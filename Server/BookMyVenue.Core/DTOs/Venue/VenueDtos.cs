@@ -14,6 +14,7 @@ public class CreateVenueDto
     public DateOnly AvailableFrom { get; set; }
     public DateOnly AvailableTo { get; set; }
     public List<string> Amenities { get; set; } = new();
+    public List<string> Images { get; set; } = new();
 
     // Payment policy (optional)
     public bool IsAdvanceRequired { get; set; } = false;

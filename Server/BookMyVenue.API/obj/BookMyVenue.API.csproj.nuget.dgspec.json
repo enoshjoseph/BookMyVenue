@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj": {}
+    "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj": {
+    "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj",
+        "projectUniqueName": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj",
         "projectName": "BookMyVenue.API",
-        "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj",
+        "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj",
         "packagesPath": "C:\\Users\\enosh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.API\\obj\\",
+        "outputPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\enosh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,11 +26,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj": {
-                "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj"
+              "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj": {
+                "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj"
               },
-              "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj"
+              "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj"
               }
             }
           }
@@ -97,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj": {
+    "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj",
+        "projectUniqueName": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj",
         "projectName": "BookMyVenue.Core",
-        "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj",
+        "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj",
         "packagesPath": "C:\\Users\\enosh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\obj\\",
+        "outputPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\enosh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -156,14 +156,14 @@
         }
       }
     },
-    "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj": {
+    "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj",
         "projectName": "BookMyVenue.Infrastructure",
-        "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\enosh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\enosh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -178,8 +178,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj": {
-                "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj"
+              "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj": {
+                "projectPath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Core\\BookMyVenue.Core.csproj"
               }
             }
           }

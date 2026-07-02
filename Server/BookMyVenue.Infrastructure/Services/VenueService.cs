@@ -40,7 +40,8 @@ public class VenueService : IVenueService
             BalanceDueDaysBeforeEvent = dto.BalanceDueDaysBeforeEvent,
             IsCancellationAllowed = dto.IsCancellationAllowed,
             CancellationDeadlineDays = dto.CancellationDeadlineDays,
-            Amenities = dto.Amenities.Select(a => new VenueAmenity { Name = a }).ToList()
+            Amenities = dto.Amenities.Select(a => new VenueAmenity { Name = a }).ToList(),
+            Images = dto.Images.Select((url, index) => new VenueImage { ImageUrl = url, IsPrimary = index == 0 }).ToList()
         };
         await _venueRepo.AddAsync(venue);
         await _venueRepo.SaveChangesAsync();
@@ -88,7 +89,14 @@ public class VenueService : IVenueService
         venue.BalanceDueDaysBeforeEvent = dto.BalanceDueDaysBeforeEvent;
         venue.IsCancellationAllowed = dto.IsCancellationAllowed;
         venue.CancellationDeadlineDays = dto.CancellationDeadlineDays;
-        venue.Amenities = dto.Amenities.Select(a => new VenueAmenity { Name = a }).ToList();
+
+        venue.Amenities.Clear();
+        foreach (var a in dto.Amenities)
+        {
+            venue.Amenities.Add(new VenueAmenity { Name = a });
+        }
+
+        // await _venueRepo.ReplaceImagesAsync(venue, dto.Images);
 
         await _venueRepo.UpdateAsync(venue);
         await _venueRepo.SaveChangesAsync();
@@ -111,6 +119,12 @@ public class VenueService : IVenueService
     public async Task<IEnumerable<VenueResponseDto>> GetOwnerVenuesAsync(Guid ownerId)
     {
         var venues = await _venueRepo.GetByOwnerIdAsync(ownerId);
+        return venues.Select(MapToDto);
+    }
+
+    public async Task<IEnumerable<VenueResponseDto>> GetAllVenuesAdminAsync()
+    {
+        var venues = await _venueRepo.GetAllAsync();
         return venues.Select(MapToDto);
     }
 
@@ -174,6 +188,23 @@ public class VenueService : IVenueService
 
         Amenities = v.Amenities.Select(a => a.Name).ToList(),
         Images = v.Images.Select(i => i.ImageUrl).ToList(),
+         BookedDates = v.Bookings
+        .Where(b => b.Status != BookingStatus.Cancelled)
+        .Select(b => new BookedDateRangeDto
+        {
+            StartDate = b.StartDate,
+            EndDate = b.EndDate
+        })
+        .ToList(),
+
+        BlockedDates = v.BlockedDates
+        .Select(b => new BlockedDateRangeDto
+        {
+            StartDate = b.StartDate,
+            EndDate = b.EndDate,
+            BlockedReason = b.BlockedReason.ToString()
+        })
+        .ToList(),
 
         IsAdvanceRequired = v.IsAdvanceRequired,
         AdvancePercentage = v.AdvancePercentage,

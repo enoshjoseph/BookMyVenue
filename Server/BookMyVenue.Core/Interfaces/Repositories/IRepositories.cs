@@ -15,17 +15,20 @@ public interface IUserRepository
 public interface IVenueRepository
 {
     Task<Venue?> GetByIdAsync(Guid id);
+    Task<IEnumerable<Venue>> GetAllAsync();
     Task<IEnumerable<Venue>> GetAllApprovedAsync();
     Task<IEnumerable<Venue>> GetByOwnerIdAsync(Guid ownerId);
     Task<IEnumerable<Venue>> SearchAsync(string? city, string? type, int? capacity, decimal? maxPrice);
     Task AddAsync(Venue venue);
     Task UpdateAsync(Venue venue);
+    Task ReplaceImagesAsync(Guid venueId, List<string> imageUrls);
     Task SaveChangesAsync();
 }
 
 public interface IBookingRepository
 {
     Task<Booking?> GetByIdAsync(Guid id);
+    Task<IEnumerable<Booking>> GetAllAsync();
     Task<IEnumerable<Booking>> GetByUserIdAsync(Guid userId);
     Task<IEnumerable<Booking>> GetByVenueIdAsync(Guid venueId);
     Task<bool> IsVenueAvailableAsync(Guid venueId, DateOnly startDate, DateOnly endDate);

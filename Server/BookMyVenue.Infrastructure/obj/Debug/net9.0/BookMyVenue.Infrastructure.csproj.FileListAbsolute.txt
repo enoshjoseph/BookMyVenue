@@ -16,3 +16,21 @@ C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Infrastructure\obj\Debug
 C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\ref\BookMyVenue.Infrastructure.dll
 C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Infrastructure\bin\Debug\net9.0\BookMyVenue.Infrastructure.runtimeconfig.json
 C:\Users\enosh\Documents\BookMyVenue\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.genruntimeconfig.cache
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\bin\Debug\net9.0\BookMyVenue.Infrastructure.deps.json
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\bin\Debug\net9.0\BookMyVenue.Infrastructure.runtimeconfig.json
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\bin\Debug\net9.0\BookMyVenue.Infrastructure.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\bin\Debug\net9.0\BookMyVenue.Infrastructure.pdb
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\bin\Debug\net9.0\BookMyVenue.Core.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\bin\Debug\net9.0\BookMyVenue.Core.pdb
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.AssemblyInfo.cs
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.sourcelink.json
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVe.6F814550.Up2Date
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\refint\BookMyVenue.Infrastructure.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.pdb
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\BookMyVenue.Infrastructure.genruntimeconfig.cache
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.Infrastructure\obj\Debug\net9.0\ref\BookMyVenue.Infrastructure.dll

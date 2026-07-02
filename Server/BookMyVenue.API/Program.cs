@@ -118,6 +118,25 @@ using (var scope = app.Services.CreateScope())
         });
         db.SaveChanges();
     }
+
+    var venuesWithoutImages = db.Venues.Include(v => v.Images).Where(v => v.Images.Count == 0).ToList();
+    foreach (var v in venuesWithoutImages)
+    {
+        string imgUrl = "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200";
+        if (v.Name.Contains("Hyat", StringComparison.OrdinalIgnoreCase))
+            imgUrl = "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200";
+        else if (v.Name.Contains("Marirot", StringComparison.OrdinalIgnoreCase) || v.Name.Contains("Marriot", StringComparison.OrdinalIgnoreCase))
+            imgUrl = "https://images.unsplash.com/photo-1545232972-fbfe6ac591fa?auto=format&fit=crop&q=80&w=1200";
+        else if (v.Name.Contains("Royal", StringComparison.OrdinalIgnoreCase))
+            imgUrl = "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200";
+
+        var img = new VenueImage { Id = Guid.NewGuid(), VenueId = v.Id, ImageUrl = imgUrl, IsPrimary = true };
+        db.Set<VenueImage>().Add(img);
+    }
+    if (venuesWithoutImages.Count > 0)
+    {
+        db.SaveChanges();
+    }
 }
 
 // ── Middleware pipeline ────────────────────────────────────
@@ -126,6 +145,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+var wwwRootPath = Path.Combine(builder.Environment.ContentRootPath, "wwwroot");
+if (!Directory.Exists(wwwRootPath))
+{
+    Directory.CreateDirectory(wwwRootPath);
+}
+app.UseStaticFiles();
 
 app.UseCors("AllowFrontend");
 app.UseAuthentication();

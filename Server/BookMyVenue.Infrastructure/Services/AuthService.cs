@@ -82,6 +82,21 @@ public class AuthService : IAuthService
         };
     }
 
+    public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
+    {
+        var users = await _userRepo.GetAllAsync();
+        return users.Select(u => new UserDto
+        {
+            Id = u.Id,
+            FullName = u.FullName,
+            Email = u.Email,
+            Phone = u.Phone,
+            Role = u.Role.ToString(),
+            IsActive = u.IsActive,
+            CreatedAt = u.CreatedAt
+        });
+    }
+
     private string GenerateJwtToken(User user)
     {
         var key = new SymmetricSecurityKey(

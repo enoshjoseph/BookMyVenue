@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VWjJz4lU7fM=",
+  "dgSpecHash": "Pwu6XOGATQE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj",
+  "projectFilePath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.API\\BookMyVenue.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enosh\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\enosh\\.nuget\\packages\\dotnetenv\\3.2.0\\dotnetenv.3.2.0.nupkg.sha512",

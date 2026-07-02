@@ -103,6 +103,12 @@ public class BookingService : IBookingService
         return bookings.Select(b => MapToDto(b, venue.Name));
     }
 
+    public async Task<IEnumerable<BookingResponseDto>> GetAllBookingsAdminAsync()
+    {
+        var bookings = await _bookingRepo.GetAllAsync();
+        return bookings.Select(b => MapToDto(b, b.Venue?.Name ?? "Unknown Venue"));
+    }
+
     public async Task ConfirmBookingAsync(Guid bookingId, Guid ownerId)
     {
         var booking = await _bookingRepo.GetByIdAsync(bookingId)

@@ -8,6 +8,7 @@ public interface IAuthService
 {
     Task<AuthResponseDto> RegisterAsync(RegisterDto dto);
     Task<AuthResponseDto> LoginAsync(LoginDto dto);
+    Task<IEnumerable<UserDto>> GetAllUsersAsync();
 }
 
 public interface IVenueService
@@ -17,6 +18,7 @@ public interface IVenueService
     Task<VenueResponseDto?> GetVenueByIdAsync(Guid venueId);
     Task<IEnumerable<VenueResponseDto>> SearchVenuesAsync(VenueSearchDto dto);
     Task<IEnumerable<VenueResponseDto>> GetOwnerVenuesAsync(Guid ownerId);
+    Task<IEnumerable<VenueResponseDto>> GetAllVenuesAdminAsync();
     Task ApproveVenueAsync(Guid venueId);
     Task RejectVenueAsync(Guid venueId);
     Task BlockDatesAsync(Guid venueId, Guid ownerId, BlockDatesDto dto);
@@ -28,6 +30,7 @@ public interface IBookingService
     Task<BookingResponseDto?> GetBookingByIdAsync(Guid bookingId);
     Task<IEnumerable<BookingResponseDto>> GetUserBookingsAsync(Guid userId);
     Task<IEnumerable<BookingResponseDto>> GetVenueBookingsAsync(Guid venueId, Guid ownerId);
+    Task<IEnumerable<BookingResponseDto>> GetAllBookingsAdminAsync();
     Task ConfirmBookingAsync(Guid bookingId, Guid ownerId);
     Task DeclineBookingAsync(Guid bookingId, Guid ownerId);
     Task CancelBookingAsync(Guid bookingId, Guid userId);

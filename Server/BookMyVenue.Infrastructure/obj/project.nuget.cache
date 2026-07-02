@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DjogS2N2B4k=",
+  "dgSpecHash": "Vv4RvW/fNdg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\enosh\\Documents\\BookMyVenue\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\enosh\\Documents\\BookMyVenue - Copy\\Server\\BookMyVenue.Infrastructure\\BookMyVenue.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enosh\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\enosh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,5 +1,6 @@
 using BookMyVenue.Core.DTOs.Auth;
 using BookMyVenue.Core.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookMyVenue.API.Controllers;
@@ -41,5 +42,13 @@ public class AuthController : ControllerBase
         {
             return Unauthorized(new { message = ex.Message });
         }
+    }
+
+    [HttpGet("admin/users")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetAllUsersForAdmin()
+    {
+        var users = await _authService.GetAllUsersAsync();
+        return Ok(users);
     }
 }
