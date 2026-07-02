@@ -44,14 +44,6 @@ public class BookingController : ControllerBase
         return Ok(bookings);
     }
 
-    [HttpGet("admin/all")]
-    [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> GetAllBookingsForAdmin()
-    {
-        var bookings = await _bookingService.GetAllBookingsAdminAsync();
-        return Ok(bookings);
-    }
-
     [HttpGet("{id}")]
     public async Task<IActionResult> GetBooking(Guid id)
     {

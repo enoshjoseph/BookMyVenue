@@ -64,79 +64,11 @@ public class VenueController : ControllerBase
         }
     }
 
-    [HttpPost("upload-images")]
-    [Authorize(Roles = "VenueOwner,Admin")]
-    public async Task<IActionResult> UploadImages(List<IFormFile> files)
-    {
-        try
-        {
-            if (files == null || files.Count == 0)
-                return BadRequest(new { message = "No files uploaded." });
-
-            var allowedTypes = new[]
-        {
-            "image/jpeg",
-            "image/png",
-            "image/webp"
-        };
-
-            var webRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
-            var uploadPath = Path.Combine(webRootPath, "uploads", "venues");
-            if (!Directory.Exists(uploadPath))
-            {
-                Directory.CreateDirectory(uploadPath);
-            }
-
-            var imageUrls = new List<string>();
-            var baseUrl = $"{Request.Scheme}://{Request.Host}";
-
-            foreach (var file in files)
-            {
-                if (file.Length <= 0)
-                    continue;
-
-                // Validate image type
-                if (!allowedTypes.Contains(file.ContentType))
-                {
-                    return BadRequest(new
-                    {
-                        message = $"Unsupported image type: {file.ContentType}. Only JPG, PNG and WebP are allowed."
-                    });
-                }
-
-                var extension = Path.GetExtension(file.FileName);
-                var fileName = $"{Guid.NewGuid()}{extension}";
-                var filePath = Path.Combine(uploadPath, fileName);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }
-
-                imageUrls.Add($"{baseUrl}/uploads/venues/{fileName}");
-            }
-
-            return Ok(new { urls = imageUrls });
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(new { message = ex.Message });
-        }
-    }
-
     [HttpGet("my")]
     [Authorize(Roles = "VenueOwner")]
     public async Task<IActionResult> GetMyVenues()
     {
         var venues = await _venueService.GetOwnerVenuesAsync(OwnerId);
-        return Ok(venues);
-    }
-
-    [HttpGet("admin/all")]
-    [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> GetAllVenuesForAdmin()
-    {
-        var venues = await _venueService.GetAllVenuesAdminAsync();
         return Ok(venues);
     }
 
