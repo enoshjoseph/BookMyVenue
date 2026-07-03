@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using BookMyVenue.Core.Entities;
 using BookMyVenue.Core.Enums;
+using StackExchange.Redis;
 
 DotNetEnv.Env.Load();
 Console.WriteLine("KeyId: " + Environment.GetEnvironmentVariable("RAZORPAY_KEY_ID"));
@@ -33,6 +34,14 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IVenueService, VenueService>();
+builder.Services.AddScoped<IRedisLockService, RedisLockService>();
+
+// ── Redis ─────────────────────────────────────────────────
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+{
+    var connectionString = builder.Configuration["Redis:ConnectionString"];
+    return ConnectionMultiplexer.Connect(connectionString!);
+});
 
 // ── JWT Auth ──────────────────────────────────────────────
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

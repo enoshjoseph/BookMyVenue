@@ -129,6 +129,10 @@
               "target": "Package",
               "version": "[9.0.4, )"
             },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[3.0.11, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.0.1, )"

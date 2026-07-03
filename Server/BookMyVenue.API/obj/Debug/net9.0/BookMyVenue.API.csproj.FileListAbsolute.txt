@@ -294,4 +294,8 @@ C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\obj\Debug\net
 C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\obj\Debug\net9.0\BookMyVenue.API.pdb
 C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\obj\Debug\net9.0\BookMyVenue.API.genruntimeconfig.cache
 C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\obj\Debug\net9.0\ref\BookMyVenue.API.dll
-C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\bin\Debug\net9.0\BookMyVenue.API.staticwebassets.runtime.json
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\bin\Debug\net9.0\RESPite.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\bin\Debug\net9.0\StackExchange.Redis.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\bin\Debug\net9.0\System.IO.Hashing.dll
+C:\Users\enosh\Documents\BookMyVenue - Copy\Server\BookMyVenue.API\bin\Debug\net9.0\System.IO.Pipelines.dll
